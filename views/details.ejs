@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Food Details</title>
+    <style>
+      body{
+        padding: 15px;
+        text-align: center;
+        background-color: teal;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .headings{
+          background-color: rgb(63, 62, 62);
+          color:white;
+      }
+      th{
+        padding: 15px;
+        border: 2px solid rgb(52, 58, 64);
+        background-color: white;
+        }
+      .main_table{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 50px;
+        border: 2px solid white;
+        background-color: white;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+      <h2 style="color:rgb(24, 26, 29)">The image uploaded is classified as</h2><h1 style="font-size:38px;color:rgb(18, 25, 32)"><u> <%= docs.name%></u></h1>
+      <table class="main_table">
+        <h2 style="color:rgb(24, 26, 29)">Nutrition Results</h2>
+        <thead>
+          <tr class="headings">
+            <th style="background-color: rgb(52, 58, 64);">Serrving Size</th>
+            <th style="background-color: rgb(52, 58, 64);">Calories</th>
+            <th style="background-color: rgb(52, 58, 64);">Sugar</th>
+            <th style="background-color: rgb(52, 58, 64);">Fat</th>
+            <th style="background-color: rgb(52, 58, 64);">Carbohydrates</th>
+            <th style="background-color: rgb(52, 58, 64);">Fiber</th>
+            <th style="background-color: rgb(52, 58, 64);">Protein</th>
+          </tr>
+          <tr>
+            <th><%= docs.size%>g</th>
+            <th><%= docs.calories%></th>
+            <th><%= docs.sugar%>g</th>
+            <th><%= docs.fat%>g</th>
+            <th><%= docs.carbohydrates%>g</th>
+            <th><%= docs.fiber%>g</th>
+            <th><%= docs.protein%>g</th>
+          </tr>
+        </thead>
+      </table>
+  </body>
+</html>

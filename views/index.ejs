@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Food Classifier</title>
+    <style>
+      body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 50px;
+        text-align: center;
+        background-color: teal;
+        color:black;
+      }
+      button{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        border:2px black solid;
+        width:100px;
+        height: 40px;
+        color:rgb(52, 58, 64);
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      .custom-file-upload {
+        padding: 10px;
+        cursor: pointer;
+        color:white;
+        background-color: rgb(52, 58, 64);
+        border:2px white solid;
+        border-radius: 15px;
+      }
+      input[type="file"] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Food Classification using CNN</h1><br>
+      <h2>Upload the image you want to classify</h2><br>
+      <form method="post" action="upload/post" enctype="multipart/form-data">
+        <label for="file-upload" class="custom-file-upload">Browse image</label>
+        <input id="file-upload" type="file" name="image" />
+        <br><br>
+        <p>After selecting the image, please click the upload button</p>
+        <button type="submit" name="upload">Upload</button>
+      </form>
+  </body>
+</html>
